@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Travel & Tourism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-space">
+        <header>
+            <nav>
+                <div class="logo">Travel&Tour</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html" id="logoutLink">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="register-container">
+        <div class="register-card">
+            <h2>My Profile</h2>
+            <div id="profileInfo" style="text-align:center; margin-bottom:2rem;"></div>
+            <form id="updateProfileForm" class="register-form">
+                <input type="text" id="profileName" placeholder="Name" required>
+                <input type="password" id="profilePassword" placeholder="New Password (leave blank to keep current)">
+                <button type="submit">Update Profile</button>
+            </form>
+            <div id="profileMessage" class="register-message"></div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

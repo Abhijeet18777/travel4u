@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Travel44U</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Admin Dashboard</h1>
+            <nav class="admin-nav">
+                <button class="nav-btn active" data-section="dashboard">Dashboard</button>
+                <button class="nav-btn" data-section="destinations">Destinations</button>
+                <button class="nav-btn" data-section="packages">Packages</button>
+                <button class="nav-btn" data-section="messages">Messages</button>
+                <button class="nav-btn" data-section="users">Users</button>
+                <button class="nav-btn logout-btn" onclick="logout()">Logout</button>
+            </nav>
+        </header>
+
+        <main class="admin-main">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="admin-section active">
+                <h2>Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Destinations</h3>
+                        <p id="destinations-count">Loading...</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Packages</h3>
+                        <p id="packages-count">Loading...</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Unread Messages</h3>
+                        <p id="unread-messages">Loading...</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Users</h3>
+                        <p id="users-count">Loading...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Destinations Section -->
+            <section id="destinations" class="admin-section">
+                <h2>Manage Destinations</h2>
+                <button class="add-btn" onclick="showAddDestinationForm()">Add New Destination</button>
+                <div id="destinations-list" class="data-list">
+                    <p>Loading destinations...</p>
+                </div>
+            </section>
+
+            <!-- Packages Section -->
+            <section id="packages" class="admin-section">
+                <h2>Manage Packages</h2>
+                <button class="add-btn" onclick="showAddPackageForm()">Add New Package</button>
+                <div id="packages-list" class="data-list">
+                    <p>Loading packages...</p>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="messages" class="admin-section">
+                <h2>Contact Messages</h2>
+                <div id="messages-list" class="data-list">
+                    <p>Loading messages...</p>
+                </div>
+            </section>
+
+            <!-- Users Section -->
+            <section id="users" class="admin-section">
+                <h2>User Management</h2>
+                <div id="users-list" class="data-list">
+                    <p>Loading users...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for adding/editing -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../frontend/config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html> 
